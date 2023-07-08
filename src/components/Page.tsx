@@ -88,18 +88,40 @@ const styles = StyleSheet.create({
   }
 })
 
-
+function findWordIndex(str : string) : number {
+  let words = str.split(" ")
+  console.log('words', words)
+  let sum = str.length
+  for (let i = words.length-1; i > 0; i--) {
+    console.log('sum', sum)
+    console.log('i', i)
+    console.log('word.length', words[i].length)
+    sum = sum - words[i].length - 1
+    if (sum <= 21) {
+      return i
+    }
+  }
+  return words.length-1
+}
 
 function PageCustom({itemDetail, date}:{itemDetail: IItemDetail, date: string}){
   
   function getName(name : string) : string {
-    if (name.length > 16) {
+    if (name.length > 21) {
       let words = name.split(" ")
-      let index = words.length/2
+      let index = findWordIndex(name)
+      console.log('index', index)
       words.splice(index, 0, '\n')
       name = words.join(" ")
     }
     return name.toLocaleUpperCase()
+  }
+
+  function toString(str : string) : string {
+    if (str !== undefined) {
+      return str
+    }
+    return " "
   }
 
   return (
@@ -122,9 +144,9 @@ function PageCustom({itemDetail, date}:{itemDetail: IItemDetail, date: string}){
           </View>
           <View style={styles.info_detail}>
             <Text style={styles.text}>{date !== '' ? date : " "}</Text>
-            <Text style={styles.text}>{itemDetail.origin}</Text>
-            <Text style={styles.text}>{itemDetail.provider}</Text>
-            <Text style={styles.text}>{itemDetail.packaging}</Text>
+            <Text style={styles.text}>{toString(itemDetail.origin)}</Text>
+            <Text style={styles.text}>{toString(itemDetail.provider)}</Text>
+            <Text style={styles.text}>{toString(itemDetail.packaging)}</Text>
             <Text style={styles.text}>{" "}</Text>
           </View>
         </View>
