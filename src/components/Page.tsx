@@ -118,7 +118,7 @@ function PageCustom({itemDetail, date}:{itemDetail: IItemDetail, date: string}){
   }
 
   function toString(str : string) : string {
-    if (str !== undefined && str === '') {
+    if (str !== undefined && str !== '') {
       return str
     }
     return " "
