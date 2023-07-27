@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   text: {
     width: '100%',
-    fontSize: '36px'
+    fontSize: '28px'
   }
 })
 
@@ -126,7 +126,7 @@ function PageCustom({itemDetail, date}:{itemDetail: IItemDetail, date: string}){
 
   return (
     <Page 
-      size="A5" 
+      size="A6" 
       orientation="landscape"
       style={styles.page}
     >
