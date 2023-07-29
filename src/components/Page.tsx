@@ -96,25 +96,25 @@ const styles = StyleSheet.create({
   },
   text: {
     width: '100%',
-    fontSize: '28px'
+    fontSize: '26px'
   }
 })
 
-function findWordIndex(str : string) : number {
-  let words = str.split(" ")
-  console.log('words', words)
-  let sum = str.length
-  for (let i = words.length-1; i > 0; i--) {
-    console.log('sum', sum)
-    console.log('i', i)
-    console.log('word.length', words[i].length)
-    sum = sum - words[i].length - 1
-    if (sum <= 21) {
-      return i
-    }
-  }
-  return words.length-1
-}
+// function findWordIndex(str : string) : number {
+//   let words = str.split(" ")
+//   console.log('words', words)
+//   let sum = str.length
+//   for (let i = words.length-1; i > 0; i--) {
+//     console.log('sum', sum)
+//     console.log('i', i)
+//     console.log('word.length', words[i].length)
+//     sum = sum - words[i].length - 1
+//     if (sum <= 21) {
+//       return i
+//     }
+//   }
+//   return words.length-1
+// }
 
 function PageCustom({itemDetail, date}:{itemDetail: IItemDetail, date: string}){
   const [isBreak, setIsBreak] = useState(false)
