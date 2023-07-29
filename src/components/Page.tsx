@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {Page, StyleSheet, Font, View, Text } from "@react-pdf/renderer";
 import { IItemDetail } from "../interfaces/ItemRecord";
 
@@ -52,9 +52,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   name_text: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     textAlign: 'center',
     fontWeight: 'black',
     fontSize: '46px',
+    letterSpacing: '-1px'
+  },
+  name_text_small: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+    fontWeight: 'black',
+    fontSize: '32px',
     letterSpacing: '-1px'
   },
   info: {
@@ -105,21 +117,22 @@ function findWordIndex(str : string) : number {
 }
 
 function PageCustom({itemDetail, date}:{itemDetail: IItemDetail, date: string}){
+  const [isBreak, setIsBreak] = useState(false)
   
   function getName(name : string) : string {
-    if (name.length > 21) {
-      let words = name.split(" ")
-      let index = findWordIndex(name)
-      console.log('index', index)
-      words.splice(index, 0, '\n')
-      name = words.join(" ")
+    if (name.includes("_")) {
+      name = name.replaceAll("_", "\n")
     }
+    if (name.includes("\n") && !isBreak){
+      setIsBreak(true)
+    }
+    console.log("name", name)
     return name.toLocaleUpperCase()
   }
 
   function toString(str : string) : string {
     if (str !== undefined && str !== '') {
-      return str
+      return str.toLocaleUpperCase()
     }
     return " "
   }
@@ -129,10 +142,22 @@ function PageCustom({itemDetail, date}:{itemDetail: IItemDetail, date: string}){
       size="A6" 
       orientation="landscape"
       style={styles.page}
+      // debug={true}
     >
       <View style={styles.content}>
         <View style={styles.name}>
-          <Text style={styles.name_text}>{getName(itemDetail.name)}</Text>
+          {
+            isBreak 
+            ? <Text 
+              style={styles.name_text_small} 
+              // debug={true}
+            >{getName(itemDetail.name)}</Text>
+            : <Text 
+              style={styles.name_text} 
+              // debug={true}
+            >{getName(itemDetail.name)}</Text>
+          }
+          
         </View>
         <View style={styles.info}>
           <View style={styles.info_title}>
