@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexWrap: "wrap",
-    border: '1px solid black',
     margin: '1mm 0 1mm 0'
   },
   name_text: {
@@ -58,7 +57,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'black',
     fontSize: '23px',
-    letterSpacing: '-1px',
     flexWrap: "wrap"
   },
   name_text_small: {
@@ -70,7 +68,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'black',
     fontSize: '16px',
-    letterSpacing: '-1px',
     flexWrap: "wrap"
   }
 })
