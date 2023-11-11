@@ -29,7 +29,7 @@ function App() {
           Single
         </div>
         <div
-          className={`${tabIndex === 1 ? 'active-tab' : 'inactive-tab'}`}
+          className={`${tabIndex === 2 ? 'active-tab' : 'inactive-tab'}`}
           onClick={() => {
             if (tabIndex !== 2) {
               setTabIndex(2);

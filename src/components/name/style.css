@@ -6,6 +6,7 @@
   margin: 2mm;
   font-size: xx-large;
   font-weight: bolder;
+  transform: rotate(-90deg);
 }
 
 .doc{
