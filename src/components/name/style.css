@@ -6,7 +6,7 @@
   align-items: center;
 }
 .label{
-  width: 50mm;
+  width: 55mm;
   height: 30mm;
   text-align: center;
   display: flex;
@@ -27,7 +27,7 @@
 }
 
 .s-doc{
-  width: 54mm;
+  width: 55mm;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
