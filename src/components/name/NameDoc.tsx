@@ -17,7 +17,7 @@ const NameDoc = React.forwardRef<HTMLDivElement, NameProps>((props, ref) => {
     }
     return compnentsArr
   }
-  return <div className='doc' ref={ref}>{genDocumentToPrint()}</div>
+  return <div className={props.style === 2 ? 'doc' : 's-doc'} ref={ref}>{genDocumentToPrint()}</div>
 })
 
 export default NameDoc
