@@ -20,7 +20,7 @@ function AppName() {
   });
 
   return (
-    <div>
+    <div className="name-app">
       <div className="data-input">
         <input
           type={"text"}
