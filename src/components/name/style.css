@@ -7,7 +7,7 @@
 }
 .label{
   width: 55mm;
-  height: 32mm;
+  height: 33mm;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -15,6 +15,7 @@
   justify-content: center;
   font-size: xx-large;
   font-weight: bolder;
+  border: solid 1px black;
 }
 
 .doc{
