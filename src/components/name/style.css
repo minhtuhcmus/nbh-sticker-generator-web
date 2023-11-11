@@ -1,23 +1,22 @@
 .label{
-  height: 50mm;
-  width: 25mm;
+  width: 40mm;
+  height: 20mm;
   text-align: center;
   line-height: 25mm;
   margin: 2mm;
   font-size: xx-large;
   font-weight: bolder;
-  transform: rotate(-90deg);
 }
 
 .doc{
-  height: 108mm;
+  width: 88mm;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .s-doc{
-  height: 54mm;
+  width: 44mm;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
