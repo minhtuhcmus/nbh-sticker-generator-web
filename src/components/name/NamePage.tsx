@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap'
   },
   label: {
-    width: '55mm',
+    width: '50mm',
     height: '33mm',
     display: 'flex',
     flexDirection: 'row',
