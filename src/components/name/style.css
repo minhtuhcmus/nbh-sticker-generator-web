@@ -1,13 +1,15 @@
 .label{
-  width: 250px;
+  width: 258px;
   height: 170px;
   text-align: center;
-  line-height: 100px;
+  line-height: 170px;
   margin: 2px;
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
 .doc{
-  width: 508px;
+  width: 524px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
