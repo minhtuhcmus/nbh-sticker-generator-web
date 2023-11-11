@@ -1,5 +1,4 @@
 import React from 'react'
-import { isPropertySignature, TypeReferenceType } from 'typescript'
 import { NameProps } from '../../interfaces/NameProps'
 import './style.css'
 // class NameDoc extends React.PureComponent {
