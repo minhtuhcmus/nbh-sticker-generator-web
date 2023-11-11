@@ -1,0 +1,14 @@
+.label{
+  width: 250px;
+  height: 170px;
+  text-align: center;
+  line-height: 100px;
+  margin: 2px;
+}
+
+.doc{
+  width: 508px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

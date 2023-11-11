@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import ListApp from "./components/list";
+import AppName from './components/name';
 import AppSingle from './components/single';
 
 function App() {
@@ -27,12 +28,24 @@ function App() {
           }}>
           Single
         </div>
+        <div
+          className={`${tabIndex === 1 ? 'active-tab' : 'inactive-tab'}`}
+          onClick={() => {
+            if (tabIndex !== 2) {
+              setTabIndex(2);
+            }
+          }}>
+          Name
+        </div>
       </div>
       <div className={`${tabIndex === 0 ? '' : 'hidden'}`}>
         <ListApp />
       </div>
       <div className={`${tabIndex === 1 ? '' : 'hidden'}`}>
         <AppSingle />
+      </div>
+      <div className={`${tabIndex === 2 ? '' : 'hidden'}`}>
+        <AppName />
       </div>
     </div>
   );
