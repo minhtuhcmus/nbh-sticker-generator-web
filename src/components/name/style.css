@@ -6,14 +6,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 2mm;
   font-size: xx-large;
   font-weight: bolder;
   border: solid black 1px;
 }
 
 .doc{
-  width: 108mm;
+  width: 110mm;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
