@@ -50,6 +50,8 @@ const styles = StyleSheet.create({
     margin: '1mm 0 1mm 0'
   },
   name_text: {
+    width: '100%',
+    height: '100%',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
@@ -60,6 +62,8 @@ const styles = StyleSheet.create({
     flexWrap: "wrap"
   },
   name_text_small: {
+    width: '100%',
+    height: '100%',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
