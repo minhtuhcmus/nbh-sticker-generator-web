@@ -30,6 +30,7 @@ Font.register({
 const styles = StyleSheet.create({
   page: {
     width: '100%',
+    height: '100%',
     display: 'flex',
     flexDirection: 'row',
     fontFamily: 'Roboto',
@@ -39,13 +40,14 @@ const styles = StyleSheet.create({
   },
   label: {
     width: '50mm',
-    height: '33mm',
+    height: '27.5mm',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     flexWrap: "wrap",
-    border: '1px solid black'
+    border: '1px solid black',
+    margin: '1mm 0 1mm 0'
   },
   name_text: {
     display: 'flex',
