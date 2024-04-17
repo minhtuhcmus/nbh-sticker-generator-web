@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   textBold: {
     width: '100%',
-    fontSize: '26px',
+    fontSize: '32px',
     fontWeight: 'bold'
   }
 })
