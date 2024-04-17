@@ -97,6 +97,11 @@ const styles = StyleSheet.create({
   text: {
     width: '100%',
     fontSize: '26px'
+  },
+  textBold: {
+    width: '100%',
+    fontSize: '26px',
+    fontWeight: 'bold'
   }
 })
 
@@ -169,7 +174,7 @@ function PageCustom({itemDetail, date}:{itemDetail: IItemDetail, date: string}){
           </View>
           <View style={styles.info_detail}>
             <Text style={styles.text}>{date !== '' ? date : " "}</Text>
-            <Text style={styles.text}>{toString(itemDetail.origin)}</Text>
+            <Text style={styles.textBold}>{toString(itemDetail.origin)}</Text>
             <Text style={styles.text}>{toString(itemDetail.provider)}</Text>
             <Text style={styles.text}>{toString(itemDetail.packaging)}</Text>
             <Text style={styles.text}>{" "}</Text>
